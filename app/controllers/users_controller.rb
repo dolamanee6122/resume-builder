@@ -7,6 +7,8 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             user_profile = Profile.create(user_id: @user.id)
+            user_profile.image.attach(io: File.open('app/assets/images/download.png'),
+                                      filename: 'image_1.png')
             user_profile.save
             log_in(@user)
             flash[:success] = "Registered successfully!"
