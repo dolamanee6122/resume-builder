@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get    '/profiles/:id'  => 'profiles#show'
   resources :profiles , only: [:update]
   resources :educations , only: [:new]
+  resources :experiences , only: [:new]
+  resources :projects , only: [:new]
 end

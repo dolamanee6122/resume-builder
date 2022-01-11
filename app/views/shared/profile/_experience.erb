@@ -1,0 +1,19 @@
+<div class="mt-8 text-gray-500">
+    <%= render 'shared/profile/item_with_description',
+        title: experience.company,
+        subtitle: experience.position,
+        start_date: experience.start,
+        end_date: experience.end,
+        description: experience.description
+    %>
+    <% if experience.projects.exists? %>
+        <h3 class="text-xl font-semibold mt-2">Projects:</h3>
+        <h3>
+            <div class="border-l pl-4">
+                <div class="mb-8">
+                    <%= render partial: 'shared/profile/project', collection: experience.projects %>
+                </div>
+            </div>
+        </h3>
+    <% end %>
+</div>
