@@ -3,8 +3,8 @@
 <main class="py-10 max-w-7xl mx-auto px-4 sm:px-8">
     <%= form_for(@profile, builder: TailwindInputBuilder) do |f| %>
         <div class="flex justify-end items-center w-full mb-4">
-            <div class="mx-1 text-purple-700", id='clipboard-btn'>
-                <%= render 'shared/input/buttons/secondary', color: "white", label: "Copy Link" %>
+            <div class="mx-1 text-purple-700" >
+                <%= render 'shared/input/buttons/secondary', color: "white", label: "Copy Link", id: "clipboard-btn", href: profile_path(@profile) %>
             </div>
             <div class="mx-1 text-purple-700">
                 <%= render 'shared/input/buttons/secondary', color: "white", label: "Preview", target: :_target, href: profile_path(@profile) %>
