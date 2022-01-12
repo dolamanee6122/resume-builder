@@ -7,7 +7,7 @@
                 <%= render 'shared/input/buttons/secondary', color: "white", label: "Copy Link", id: "clipboard-btn", href: profile_path(@profile) %>
             </div>
             <div class="mx-1 text-purple-700">
-                <%= render 'shared/input/buttons/secondary', color: "white", label: "Preview", target: :_target, href: profile_path(@profile) %>
+                <%= render 'shared/input/buttons/secondary', color: "white", label: "Preview", target: :_blank, href: profile_path(@profile) %>
             </div>
             <div>
                 <%= f.submit "Save", class: "flex-shrink-0 px-4 py-2 mx-1 text-base font-semibold text-white bg-green-600 rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-green-200" %><br/>
